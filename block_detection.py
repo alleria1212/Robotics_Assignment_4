@@ -22,7 +22,6 @@ def draw_centroid(draw, img_c, size=2):
     draw.ellipse([int(img_c[1]) - size, int(img_c[0]) -size, int(img_c[1]) + size, int(img_c[0]) + size], fill='blue')
     
 def draw_principal_angle(draw, img_c, p_a):
-    # TODO: Draw line according to image size 720
     draw.line([(y*math.tan(p_a) + img_c[1] - img_c[0]*math.tan(p_a), y) for y in range(0, 720)], fill='yellow', width=5)
 
 def draw(img_original, objects, action='save'):
