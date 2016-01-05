@@ -119,14 +119,14 @@ if __name__ == '__main__':
          set_speedrate_f(socketIO)
          open_grip(socketIO)
          move_def(socketIO)
-         i=2
+         i=0
          for block in blocks:
             # 4. Get one block.
             x, y, rx = grip_position(block['centroid'], block['principal_angle'])
             get_block(socketIO, x, y, rx)
             # 5. Put it to the predefined position
             put_block(socketIO, x, y, rx,i)
-            i=i+1s
+            i=i+1
          move_home(socketIO)
 
 
